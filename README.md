@@ -76,7 +76,7 @@ Contributions are welcome! Feel free to fork the repository, create a branch, an
 
 📜 License
 
-This project is private for now. Licensing terms will be added in future versions.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ✨ Author: Aravind
 📅 Started On: March 2025
