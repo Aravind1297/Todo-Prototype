@@ -20,9 +20,11 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(){
+        String adminUsername = System.getenv("ADMIN_USERNAME");
+        String adminPassword = System.getenv("ADMIN_PASSWORD");
         UserDetails user = User.withDefaultPasswordEncoder()
-                .username("admin")
-                .password("password")
+                .username(adminUsername)
+                .password(adminPassword)
                 .roles("USER")
                 .build();
 
