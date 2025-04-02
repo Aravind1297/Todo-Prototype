@@ -4,7 +4,11 @@ Todo-Prototype
 
 Todo-Prototype is a full-stack Task Management Application that allows users to Create, Read, Update, and Delete (CRUD) tasks. The backend is built using Spring Boot, and the frontend will be developed in future versions.
 
-🛠 Current Version: v1.0
+🛠 Current Version: v1.1
+Whats new in v1.1?
+Integrated MySQL – Replaced in-memory H2 database with a persistent MySQL database for better data management.
+Environment Configurations – Added separate Dev and Prod configurations to support continuous testing and integration
+
 
 Backend: Spring Boot with an in-memory database (H2)
 
@@ -16,11 +20,9 @@ Uses Gradle for build and dependency management
 
 🚀 Future Roadmap
 
-v2.0 → Integrate an external database (PostgreSQL/MySQL)
+v2.0 → Add frontend (React/Angular/Vue)
 
-v3.0 → Add frontend (React/Angular/Vue)
-
-v4.0+ → Implement OAuth, Role-based authentication, and other features
+v3.0+ → Implement OAuth, Role-based authentication, and other features
 
 📂 Project Structure
 
@@ -40,13 +42,21 @@ Todo-Prototype/
 git clone https://github.com/your-username/Todo-Prototype.git
 cd Todo-Prototype/backend
 
-2️⃣ Build & Run the Backend
+2️⃣ Configure the database
+
+Create a MySQL database for the project.
+
+CREATE DATABASE taskdb
+
+--> Update application-dev.properties for local deployment
+
+3️⃣ Build & Run the Backend
 
 ./gradlew bootRun
 
 The application runs at: http://localhost:8081
 
-3️⃣ Access the API Endpoints
+4️⃣ Access the API Endpoints
 
 You can test API endpoints using Postman or cURL:
 
@@ -58,13 +68,20 @@ PUT /tasks/{id} → Update a task
 
 DELETE /tasks/{id} → Delete a task
 
+Sample JSON for Creating a Task:
+{
+  "title": "Complete Spring Boot Project",
+  "description": "Implement CRUD operations",
+  "completed": false
+}
+
 Note: The application requires authentication (username & password) to access API endpoints.
 
 🛠 Technologies Used
 
 Backend: Java, Spring Boot, Spring Data JPA, Spring Security
 
-Database: H2 (In-memory)
+Database: MySQL
 
 Build Tool: Gradle
 
